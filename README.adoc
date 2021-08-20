@@ -14,10 +14,11 @@ The project is divided into two parts:
 
 == Getting Started Parser
 
-`gradlew build`
+* Run tests `./gradlew test`
+* Pass files via command-line: `./gradlew run --args "file.json"`
 
 == Getting Started Language Examples
 
 === Via Docker
 
-* Pull semantic docker image `docker pull ghcr.io/github/semantic/semantic`
+* Run the `language-examples/analyze.sh` and take a look at the resulting files in language-examples/_analyzed.

@@ -51,6 +51,7 @@ tags
 ### Gradle template
 .gradle
 /build/
+/parser/build/
 
 # Ignore Gradle GUI config
 gradle-app.setting
