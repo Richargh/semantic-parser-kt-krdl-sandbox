@@ -34,7 +34,10 @@ class ComplexityCounterTest {
     @ValueSource(strings = [
     "(VariableDeclaration",
     "(Try",
-    "(Match"])
+    "(Match",
+
+    "(Import)",
+    "(DefaultExport"])
     fun `these symbols should not increment complexity because they create no branch in the control flow`(line: String){
         // given
         val counter = ComplexityCounter()
