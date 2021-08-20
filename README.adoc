@@ -9,7 +9,7 @@ Maybe we can also use this format to generate metrics for any of the languages S
 
 The project is divided into two parts:
 
-* parser: for parsing semantic json files
+* parser: for parsing semantic AST files and generate McCabe complexity from it.
 * language-examples: where we store code esxamples to analyze with semantic and transform into json files
 
 == Results
@@ -23,8 +23,6 @@ Semantic provides two different output-formats: `--json-symbols` and `--sexpress
 `--show` is another output format that is unfortunately not guaranteed to stay stable. It contains the symbol values (name of the variable, function etc.) but no location either.
 
 To generate more complex metrics we'd have to either tokenize the actual file contents and match them to the `--sexpression` output (without identifiers) or the `--show` output (which can change theoretically any minute).
-
-So far the only thing we've done is take the AST and generate McCabe Complexity from it.
 
 == Getting Started Parser
 
