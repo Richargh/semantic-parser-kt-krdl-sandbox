@@ -16,8 +16,10 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
+    implementation(kotlin("reflect"))
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junit5_version")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:$junit5_version")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:$junit5_version")
     testImplementation("org.assertj:assertj-core:$assertj_version")
 }
