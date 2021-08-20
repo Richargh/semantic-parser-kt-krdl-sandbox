@@ -21,4 +21,5 @@ The project is divided into two parts:
 
 === Via Docker
 
-* Run the `language-examples/analyze.sh` and take a look at the resulting files in language-examples/_analyzed.
+* In your (Git) bash run `cd language-examples`, next `./analyze.sh`
+* Then take a look at the resulting files in `_analyzed`.
