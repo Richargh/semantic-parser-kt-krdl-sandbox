@@ -12,6 +12,20 @@ The project is divided into two parts:
 * parser: for parsing semantic json files
 * language-examples: where we store code esxamples to analyze with semantic and transform into json files
 
+== Results
+
+Semantic provides two different output-formats: `--json-symbols` and `--sexpression`.
+
+`--json-symbols` creates a `.json` file that contains the location (start line/column and end line/column) of all "Class", "Function", "Method" or "Call" (function or method call) symbols. It's nice for linking functions/methods with the place they get called from. Incidentally that's what Github uses it for. It's not possible to calculate metrics from this limited information though.
+
+`--sexpression` creates a nice abstract syntax tree (AST) of the code. Here's an link:https://github.com/github/semantic/blob/master/docs/examples.md[example] if you don't want to run the script further below. It's great because the structures are nested when the code is nested and the syntax terms are generalized across all supported languages. It is however missing the location in the file (start line/column and end line/column). The AST is also missing the actual symbol values (name of the variable, function etc.). We cannot calculate how long the average if statement is like this. We cannot calculate the amount of comments in the code. We can however calculate the McCabe complexity and similar nice things.
+
+`--show` is another output format that is unfortunately not guaranteed to stay stable. It contains the symbol values (name of the variable, function etc.) but no location either.
+
+To generate more complex metrics we'd have to either tokenize the actual file contents and match them to the `--sexpression` output (without identifiers) or the `--show` output (which can change theoretically any minute).
+
+So far the only thing we've done is take the AST and generate McCabe Complexity from it.
+
 == Getting Started Parser
 
 * Run tests `./gradlew test`
