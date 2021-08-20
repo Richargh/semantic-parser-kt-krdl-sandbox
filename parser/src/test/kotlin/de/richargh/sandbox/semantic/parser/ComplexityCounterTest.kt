@@ -36,6 +36,8 @@ class ComplexityCounterTest {
     "(Try",
     "(Match",
 
+    "(Comment)",
+
     "(Import)",
     "(DefaultExport"])
     fun `these symbols should not increment complexity because they create no branch in the control flow`(line: String){
