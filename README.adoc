@@ -1,0 +1,23 @@
+= Semantic Parsing with Kotlin (Sandbox)
+
+link:https://github.com/github/semantic[Semantic] is a Github project for parsing, analyzing, and comparing source code.
+It is language agnostic and supports Js/Ts/Python/Ruby and many more languages.
+
+One of the things it can do is to transform code in the supported languages to a common json format, see link:https://github.com/github/semantic/blob/master/docs/examples.md[docs/examples]. That is the format that Github uses to provide code navigation.
+
+Maybe we can also use this format to generate metrics for any of the languages Semantic supports.
+
+The project is divided into two parts:
+
+* parser: for parsing semantic json files
+* language-examples: where we store code esxamples to analyze with semantic and transform into json files
+
+== Getting Started Parser
+
+`gradlew build`
+
+== Getting Started Language Examples
+
+=== Via Docker
+
+* Pull semantic docker image `docker pull ghcr.io/github/semantic/semantic`
